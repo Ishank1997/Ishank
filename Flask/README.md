@@ -1,27 +1,15 @@
-# AstonVillaApp
+# Simple Python Flask Dockerized Application#
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+Build the image using the following command
 
-## Development server
+```bash
+$ docker build -t simple-flask-app:latest .
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run the Docker container using the command shown below.
 
-## Code scaffolding
+```bash
+$ docker run -d -p 5000:5000 simple-flask-app
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The application will be accessible at http:127.0.0.1:5000 or if you are using boot2docker then first find ip address using `$ boot2docker ip` and the use the ip `http://<host_ip>:5000`
